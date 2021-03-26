@@ -1,0 +1,106 @@
+.first-section{
+    width: 100%;
+    padding-top: 80px;
+    min-height: calc(100vh);
+    background-color: #e6f2df;
+    
+}
+
+.first-section h1{
+    padding-top:170px;
+
+}
+
+.first-section p{
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1em;
+    width: 100%;
+    color:black;
+    letter-spacing: .1em;
+}
+
+.first-section img{
+    width: 100%;
+    object-fit: contain;
+    object-position: center center;
+    margin-bottom: 20px;
+    height: 500px;
+}
+
+
+.indexLink{
+    font-size: 3em;
+    text-decoration: underline;
+    color: black;
+    letter-spacing: .15em;
+}
+
+.second-section{
+    padding: 50px 0;
+}
+
+.second-section img{
+    width: 50%;
+    object-fit: contain;
+    object-position: center center;
+    margin-bottom: 20px;
+}
+
+.second-section h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-size: 3em;
+    letter-spacing: .1em;
+    color: black;
+}
+
+.second-section article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.third-section{
+    margin: 0 auto;
+    padding: 100px 0;
+    min-height: calc(100vh - 100px);
+    background-color:  #e6f2df;
+}
+.third-section h2{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+    font-size: 3em;
+    letter-spacing: .1em;
+    color: black;
+}
+
+.third-section img{
+    width: 50%;
+    object-fit: contain;
+}
+
+.bottom-card-news{
+    align-self: center;
+}
+
+
+.bottom-card-news  h5{
+    text-decoration: none;
+    color: black;
+    font-size: 1.5em;
+}
+
+.bottom-card-news p{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.bottom-card-news:hover{
+    text-decoration: none;
+}
