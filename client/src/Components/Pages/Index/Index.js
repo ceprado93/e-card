@@ -6,6 +6,12 @@ import userman from './userImage.png'
 import share from './share.png'
 import contacts from './phone-book.png'
 import bcard from './business-cards.png'
+import desktop from './desktop.png'
+import signup from './signup.png'
+import exchange from './exchange.png'
+
+
+
 
 
 const IndexPage = ({ loggedUser }) => {
@@ -26,7 +32,9 @@ const IndexPage = ({ loggedUser }) => {
                             <h1>E-Card</h1>
                             <h4>Reliable online bussiness cards</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco</p>
-                            <Button variant="success">Log in</Button>
+                            <Button variant="success" block>Log in</Button>
+                            <Button variant="outline-success" block>Sign up</Button>
+
                         </Col>
                         <Col md={5}>
                             <img src={userman} alt="user" />
@@ -36,7 +44,6 @@ const IndexPage = ({ loggedUser }) => {
             </section>
             <section className="second-section">
                 <Container>
-                    <h2>Features</h2>
                     <Row>
                         <Col md={{ span: 2, offset: 2 }}>
                             <article>
@@ -68,9 +75,10 @@ const IndexPage = ({ loggedUser }) => {
             <section className="third-section">
                 <Container>
                     <h2>How it works</h2>
+                    <hr></hr>
                     <Row style={{ marginBottom: 150 }}>
                         <Col md={{ span: 3, offset: 2 }}>
-                            <img src={contacts} alt="account" />
+                            <img src={signup} alt="account" />
                         </Col>
                         <Col md={5}>
                             <h3> Create an account</h3>
@@ -82,16 +90,16 @@ const IndexPage = ({ loggedUser }) => {
                         <Col md={{ span: 5, offset: 2 }}>
                             <h3> Save E-Card on your home page</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
-                            <Link to='/signup'><Button variant="success">Sign up</Button></Link>
+                            <Link to='/signup'><Button variant="success">Features</Button></Link>
                         </Col>
                         <Col md={3}>
-                            <img src={contacts} alt="account" />
+                            <img src={desktop} alt="account" />
                         </Col>
 
                     </Row>
                     <Row style={{ marginBottom: 50 }}>
                         <Col md={{ span: 3, offset: 2 }}>
-                            <img src={contacts} alt="account" />
+                            <img src={exchange} alt="account" />
                         </Col>
                         <Col md={5}>
                             <h3> Share your card and network</h3>

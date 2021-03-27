@@ -1,6 +1,6 @@
 .first-section{
     width: 100%;
-    padding-top: 80px;
+    padding-top: 90px;
     min-height: calc(100vh);
     background-color: #e6f2df;
     
@@ -19,6 +19,7 @@
     width: 100%;
     color:black;
     letter-spacing: .1em;
+    margin-bottom: 20px;
 }
 
 .first-section img{

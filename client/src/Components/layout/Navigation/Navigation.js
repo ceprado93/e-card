@@ -31,8 +31,8 @@ const Navigation = ({ storeUser, loggedUser, isAdmin }) => {
                 <Navbar.Brand> <img
                     alt="logo"
                     src={logo}
-                    width="100"
-                    height="80"
+                    width="70"
+                    height="50"
                     style={{ marginLeft: 15 }}
                     className="d-inline-block align-top"
                 />{' '} </Navbar.Brand>
