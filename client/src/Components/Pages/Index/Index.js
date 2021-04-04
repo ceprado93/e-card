@@ -9,19 +9,40 @@ import bcard from './business-cards.png'
 import desktop from './desktop.png'
 import signup from './signup.png'
 import exchange from './exchange.png'
-
-
-
-
+import styled from 'styled-components'
+import YouTube from 'react-youtube';
 
 const IndexPage = ({ loggedUser }) => {
 
     const [show, setShow] = useState({ news: true, media: false })
+    const [size, setSize] = useState(0)
+
 
     useLayoutEffect(() => {
         window.scrollTo(0, 0)
+        { window.innerWidth > 1000 && setSize(400) }
+        { window.innerWidth < 1000 && setSize(400) }
 
     }, [])
+
+    function onReady(event) {
+        event.target.pauseVideo();
+    }
+
+    const VideoWrapper = styled.div`
+    width:100%;
+    height:${size};
+    margin-bottom: 80px;
+    `
+
+
+    const opts = {
+        height: '500px',
+        width: '100%',
+        playerVars: {
+            autoplay: 1,
+        },
+    }
 
     return (
         <>
@@ -74,7 +95,7 @@ const IndexPage = ({ loggedUser }) => {
             </section>
             <section className="third-section">
                 <Container>
-                    <h2>How it works</h2>
+                    <h2>Get started</h2>
                     <hr></hr>
                     <Row style={{ marginBottom: 150 }}>
                         <Col md={{ span: 3, offset: 2 }}>
@@ -105,6 +126,19 @@ const IndexPage = ({ loggedUser }) => {
                             <h3> Share your card and network</h3>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
                             <Link to='/signup'><Button variant="success">Sign up</Button></Link>
+                        </Col>
+                    </Row>
+                </Container>
+            </section>
+
+            <section className="videoSection">
+                <Container>
+                    <Row>
+                        <Col md={{ span: 10, offset: 1 }}>
+                            <h1>How it works</h1>
+                            <VideoWrapper>
+                                <YouTube videoId='d2bg-jgdF1w' opts={opts} onReady={onReady} />
+                            </VideoWrapper>
                         </Col>
                     </Row>
                 </Container>

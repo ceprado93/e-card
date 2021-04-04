@@ -3,6 +3,8 @@ import AuthService from '../../../Service/auth.service'
 import { Form, Button, Container, Row, Col, Jumbotron } from 'react-bootstrap'
 import './Login.css'
 import Alert from '../../Shared/Alert/Alert'
+import logo from '../../layout/Navigation/logo.png'
+import { Link } from 'react-router-dom'
 
 class Login extends Component {
 
@@ -46,36 +48,21 @@ class Login extends Component {
         return (
             <>
                 <section className="login">
-                    <h1>Log in</h1>
-                </section>
-                <section >
+                    <img src={logo} alt="logo" />
+                    <Form className="form-login" onSubmit={e => this.handleSubmit(e)}>
+                        <Form.Group>
+                            <Form.Label className="label-login">Username</Form.Label>
+                            <Form.Control type="text" name="username" value={this.state.username} onChange={e => this.handleInputChange(e)} />
+                        </Form.Group>
+                        <Form.Group>
+                            <Form.Label className="label-login">Password</Form.Label>
+                            <Form.Control type="password" name="password" value={this.state.password} onChange={e => this.handleInputChange(e)} />
+                        </Form.Group>
 
-                    <Container>
+                        <Button variant="outline-dark" block type="submit" className="log-button">Log in</Button>
+                    </Form>
+                    <small>Don´t have an account? <Link to='/login' style={{ color: '#60b62f' }}>Log in</Link> </small>
 
-                        <Row>
-
-                            <Col>
-
-                                <Jumbotron className="jumbo-login">
-                                    <Form onSubmit={e => this.handleSubmit(e)}>
-                                        <Form.Group>
-                                            <Form.Label className="label-login">Username</Form.Label>
-                                            <Form.Control type="text" name="username" value={this.state.username} onChange={e => this.handleInputChange(e)} />
-                                        </Form.Group>
-                                        <Form.Group>
-                                            <Form.Label className="label-login">Password</Form.Label>
-                                            <Form.Control type="password" name="password" value={this.state.password} onChange={e => this.handleInputChange(e)} />
-                                        </Form.Group>
-
-                                        <Button variant="outline-dark" block type="submit" className="log-button">Log in</Button>
-                                    </Form>
-                                </Jumbotron>
-
-                            </Col>
-
-                        </Row>
-
-                    </Container>
                     <Alert handleAlert={this.handleAlert} show={this.state.alert.show} title={this.state.alert.title} text={this.state.alert.text} />
 
                 </section>

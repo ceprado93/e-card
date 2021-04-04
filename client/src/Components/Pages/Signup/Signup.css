@@ -1,27 +1,41 @@
 .signup{
     margin-top: 0;
     width: 100%;
-    height: 450px;
-    background-image: url('https://www.motor.es/fotos-noticias/2020/10/calendario-wrc-2021-incluye-doce-rondas-nueve-europa-202071788-1602572425_1.jpg');
-    background-size: cover;
-    background-position: 100% 80%;
+    min-height: calc(100vh);
     margin-bottom: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 .signup h1{
-    padding-top: 150px;
+    padding-top: 50px;
     display: flex;
     justify-content: center;
     font-weight: 500;
     font-size: 4em;
     letter-spacing: .2em;
-    color:white;
+    color:black;
     text-transform: uppercase;
+}
+
+.signup img{
+    width: 150px;
+    align-self: center;
+    margin-bottom: 50px;
+}
+
+.signup small{
+    align-self: center;
 }
 
 .form-signup{
     padding: 10px;
+    width: 50%;
+    align-self: center;
 }
+
 .label-signup{
     font-size: 30px;
     letter-spacing: .2em;
