@@ -42,10 +42,10 @@ const Navigation = ({ storeUser, loggedUser, isAdmin }) => {
                 <Nav className="ml-auto">
 
                     <NavLink to="/media" >
-                        <Nav.Link as="span" className={changeClass ? "navb filled" : "link-color"}>Features</Nav.Link>
+                        <Nav.Link as="span" >Features</Nav.Link>
                     </NavLink>
                     <NavLink to="/news" >
-                        <Nav.Link as="span" className={changeClass ? "navb filled" : "link-color"}>About Us</Nav.Link>
+                        <Nav.Link as="span" >About</Nav.Link>
                     </NavLink>
                     {
                         loggedUser
@@ -53,28 +53,28 @@ const Navigation = ({ storeUser, loggedUser, isAdmin }) => {
                             isAdmin === 'admin' ?
                                 <>
                                     <NavDropdown title="Private" id="basic-nav-dropdown">
-                                        <NavDropdown.Item > <Link to="/profile" className={changeClass ? "navb filled" : "link-color"} >Profile</Link></NavDropdown.Item>
+                                        <NavDropdown.Item > <Link to="/profile"  >Profile</Link></NavDropdown.Item>
                                         <NavDropdown.Divider />
-                                        <NavDropdown.Item ><Link to="/admin-page" className={changeClass ? "navb filled" : "link-color"}>Admin page</Link></NavDropdown.Item>
+                                        <NavDropdown.Item ><Link to="/admin-page" >Admin page</Link></NavDropdown.Item>
                                     </NavDropdown>
-                                    <Nav.Link as="span" className={changeClass ? "navb filled" : "link-color"} onClick={() => logoutUser()}>Log out</Nav.Link>
+                                    <Nav.Link as="span" onClick={() => logoutUser()}>Log out</Nav.Link>
 
                                 </>
                                 :
                                 <>
                                     <NavLink to="/profile">
-                                        <Nav.Link as="span" className={changeClass ? "navb filled" : "link-color"}>Profile ({loggedUser.username})</Nav.Link>
+                                        <Nav.Link as="span" >Profile ({loggedUser.username})</Nav.Link>
                                     </NavLink>
-                                    <Nav.Link as="span" className={changeClass ? "navb filled" : "link-color"} onClick={() => logoutUser()}>Log out</Nav.Link>
+                                    <Nav.Link as="span" onClick={() => logoutUser()}>Log out</Nav.Link>
 
                                 </>
                             :
                             <>
                                 <NavLink to="/login">
-                                    <Nav.Link as="span" className={changeClass ? "navb filled" : "link-color"}>Log in</Nav.Link>
+                                    <Nav.Link as="span" >Log in</Nav.Link>
                                 </NavLink>
                                 <NavLink to="/signup">
-                                    <Nav.Link as="span" className={changeClass ? "navb filled" : "link-color"}>Sign up</Nav.Link>
+                                    <Nav.Link as="span" >Sign up</Nav.Link>
                                 </NavLink>
                             </>
                     }

@@ -19,7 +19,7 @@ const Routes = ({ storeUser, loggedUser, isAdmin, handleAlert }) => {
                 <Route path="/login" exact render={props => <Login storeUser={storeUser}  {...props} />} />
                 <Route path="/signup" exact render={() => <Signup />} />
                 <Route path="/contact" exact render={() => <Contact />} />
-                <Route path="/profile" exact render={() => <Profile />} />
+                <Route path="/profile" exact render={() => <Profile loggedUser={loggedUser} />} />
 
 
             </Switch>

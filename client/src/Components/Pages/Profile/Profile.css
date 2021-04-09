@@ -1,4 +1,34 @@
-.profile{
-    min-height: calc(100vh);
+.profile-head{
+    margin-top: 0;
+    width: 100%;
+    height: 250px;
+    background-color: #e6f2df;
     margin-bottom: 100px;
+}
+
+.profile-head h1{
+    padding-top: 125px;
+    display: flex;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 4em;
+    letter-spacing: .2em;
+    color:black;
+    text-transform: uppercase;
+
+}
+
+.user-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+    min-height: calc(100vh - 354px);
+}
+
+.user-box img{
+    border-radius: 50%;
+    border: 2px solid black;
+    width: 40%;
+    margin-bottom: 15px;
 }

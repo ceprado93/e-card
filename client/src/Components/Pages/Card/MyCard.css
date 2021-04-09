@@ -1,0 +1,8 @@
+.myCard{
+    display: flex;
+}
+
+.cardInfo{
+    display: flex;
+    flex-direction: column;
+}

@@ -63,6 +63,9 @@ const IndexPage = ({ loggedUser }) => {
                     </Row>
                 </Container>
             </section>
+            <section className="empty-div">
+
+            </section>
             <section className="second-section">
                 <Container>
                     <Row>

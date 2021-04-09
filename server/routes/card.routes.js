@@ -10,25 +10,19 @@ router.get('/', (req, res) => {
         .catch(err => res.status(500).json({ code: 500, message: 'Error fetching Card', err }))
 })
 
-router.get('/latest', (req, res) => {
-    Card.find()
-        .sort('-createdAt')
-        .limit(4)
-        .then(response => res.json(response))
-        .catch(err => res.status(500).json({ code: 500, message: 'Error fetching Card', err }))
-})
-
-router.get('/details/:card_id', (req, res) => {
-    Card.findById(req.params.card_id)
+router.get('/details/:userId', (req, res) => {
+    Card.find({ Author: req.params.userId })
         .then(response => res.json(response))
         .catch(err => res.status(500).json({ code: 500, message: 'Error fetching Card', err }))
 })
 
 router.post('/new', (req, res) => {
-    const { phone, email, job, company, address, image } = req.body,
-        author = req.session.user.id
+    console.log('-------', req.body)
+    const { phone, email, job, company, address, image } = req.body
+    console.log(req.session.user)
+    Author = req.session.user._id
 
-    Card.create({ phone, email, job, company, address, image, author })
+    Card.create({ phone, email, job, company, address, image, Author })
         .then(response => res.json(response))
         .catch(err => res.status(500).json({ code: 500, message: 'Error saving Card', err }))
 })
